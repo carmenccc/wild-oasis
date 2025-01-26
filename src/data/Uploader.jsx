@@ -14,6 +14,9 @@ import { guests } from "./data-guests";
 //   maxGuestsPerBooking: 10,
 //   breakfastPrice: 15,
 // };
+//
+
+// These are for uploading sample data for development
 
 async function deleteGuests() {
   const { error } = await supabase.from("guests").delete().gt("id", 0);
