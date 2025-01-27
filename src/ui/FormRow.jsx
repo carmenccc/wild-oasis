@@ -4,8 +4,8 @@ import styled from "styled-components";
 const StyledFormRow = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: 24rem 1fr 1.2fr;
-  gap: 2.4rem;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
 
   padding: 1.2rem 0;
 
@@ -23,7 +23,7 @@ const StyledFormRow = styled.div`
 
   &:has(button) {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 1.2rem;
   }
 `;
