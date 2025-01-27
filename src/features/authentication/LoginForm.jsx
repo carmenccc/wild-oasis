@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import Input from "../../ui/Input";
-import FormRow from "../../ui/FormRow";
+import FormRowVertical from "../../ui/FormRowVertical";
 import { useLogin } from "./useLogin";
 import SpinnerMini from "../../ui/SpinnerMini";
 
@@ -28,7 +28,7 @@ function LoginForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <FormRow label="Email address">
+      <FormRowVertical label="Email address">
         <Input
           type="email"
           id="email"
@@ -38,8 +38,8 @@ function LoginForm() {
           onChange={(e) => setEmail(e.target.value)}
           disabled={isLoading}
         />
-      </FormRow>
-      <FormRow label="Password">
+      </FormRowVertical>
+      <FormRowVertical label="Password">
         <Input
           type="password"
           id="password"
@@ -48,12 +48,12 @@ function LoginForm() {
           onChange={(e) => setPassword(e.target.value)}
           disabled={isLoading}
         />
-      </FormRow>
-      <FormRow>
+      </FormRowVertical>
+      <FormRowVertical>
         <Button size="large" disabled={isLoading}>
           {!isLoading ? "Login" : <SpinnerMini />}
         </Button>
-      </FormRow>
+      </FormRowVertical>
     </Form>
   );
 }
