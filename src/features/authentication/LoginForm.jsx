@@ -5,6 +5,7 @@ import Input from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
 import { useLogin } from "./useLogin";
 import SpinnerMini from "../../ui/SpinnerMini";
+import Heading from "../../ui/Heading";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -54,6 +55,27 @@ function LoginForm() {
           {!isLoading ? "Login" : <SpinnerMini />}
         </Button>
       </FormRowVertical>
+
+      {/* Test Account */}
+      <div
+        style={{
+          marginTop: "2rem",
+          backgroundColor: "#dbe3f8",
+          padding: "8px",
+          borderRadius: "5px",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          gap: "8px",
+        }}
+      >
+        <FormRowVertical>
+          <p>Login with a guest account and try out this app!</p>
+          <Heading as="h2">Guest Account:</Heading>
+          <p>Email: test@test.com</p>
+          <p>Password: happynewyear</p>
+        </FormRowVertical>
+      </div>
     </Form>
   );
 }
